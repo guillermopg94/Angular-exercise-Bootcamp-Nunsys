@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;" *ngIf="articulo" >
+    <img class="card-img-top" [src]="articulo.getImagen()" alt="Articulo {{articulo.getNombre()}}">
+    <div class="card-body">
+      <h5 class="card-title">{{articulo.getNombre()}}</h5>
+      <p class="card-text">{{articulo.getDescripcion()}}</p>
+      <a [routerLink]="['articulo-ficha', articulo.getId()]" class="btn btn-primary">Ver producto</a>
+    </div>
+  </div>

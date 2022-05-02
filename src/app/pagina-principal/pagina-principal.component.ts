@@ -15,6 +15,7 @@ export class PaginaPrincipalComponent implements OnInit {
 
   ngOnInit(): void {
    this.obtenerArticulos();
+  
   }
 
   private obtenerArticulos(){
@@ -29,7 +30,7 @@ export class PaginaPrincipalComponent implements OnInit {
   }
 
   public navegarAFicha(idArticulo: number):void{
-      this.router.navigate(['articulo-ficha', idArticulo]);
+      this.router.navigate(['articulo-form', idArticulo]);
   }
 
 }
