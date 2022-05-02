@@ -4,13 +4,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
-import { ArticuloListComponent } from './articulo/articulo-list/articulo-list.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { ArticuloFormComponent } from './articulo/articulo-form/articulo-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaginaPrincipalComponent,
-    ArticuloListComponent
+    NavbarComponent,
+    ArticuloFormComponent
   ],
   imports: [
     BrowserModule,

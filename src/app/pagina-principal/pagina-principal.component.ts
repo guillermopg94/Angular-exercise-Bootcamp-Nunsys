@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Articulo } from '../articulo/articulo-list/articulo.model';
-import { ArticuloService } from '../articulo/articulo-list/articulo.service';
+import { Articulo } from '../articulo/articulo.model';
+import { ArticuloService } from '../articulo/articulo.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-pagina-principal',
   templateUrl: './pagina-principal.component.html',
@@ -9,7 +10,8 @@ import { ArticuloService } from '../articulo/articulo-list/articulo.service';
 export class PaginaPrincipalComponent implements OnInit {
 
   articulos: Articulo [] = [];
-  constructor(private articuloService: ArticuloService) { }
+  constructor(private articuloService: ArticuloService,
+    private router: Router) { }
 
   ngOnInit(): void {
    this.obtenerArticulos();
@@ -24,6 +26,10 @@ export class PaginaPrincipalComponent implements OnInit {
       })
       }
     )
+  }
+
+  public navegarAFicha(idArticulo: number):void{
+      this.router.navigate(['articulo-ficha', idArticulo]);
   }
 
 }
