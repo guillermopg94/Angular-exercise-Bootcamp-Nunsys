@@ -19,7 +19,6 @@
   </div>
   <div  class="cardContainer">
     <div *ngFor="let articulo of articulos; let i = index" class="cards" >
-     
     <img *ngIf="i >1 && i < 5" src="{{articulo.getImagen()}}" alt="" class="imgtarjeta">
     <p *ngIf="i >1 && i < 5">{{articulo.getNombre()}}</p>
     <img *ngIf="i >=5 " src="{{articulo.getImagen()}}" alt="" class="imgtarjeta" (click)="navegarAFicha(articulo.getId())">

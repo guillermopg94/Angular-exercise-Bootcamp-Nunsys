@@ -8,8 +8,6 @@ const routes: Routes = [
   {path: '', component: PaginaPrincipalComponent},
   {path: 'articulo-form/:idArticulo', component: ArticuloFormComponent},
 
-
-
 ];
 
 @NgModule({
